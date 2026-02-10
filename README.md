@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Urban Harvest 🌱
 
 A sustainable lifestyle platform combining e-commerce with community engagement for eco-conscious consumers.
@@ -442,3 +443,7 @@ For questions about this project, please contact:
 **Version**: 1.0.0
 
 Made with 💚 for a sustainable future
+=======
+# Urban-Harvest
+CB014598
+>>>>>>> 9d15332638dadb6ad1d25fae2913bea86d92e951
