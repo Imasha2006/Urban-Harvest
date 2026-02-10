@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" class="smooth-scroll">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Subscribe to Urban Harvest for weekly eco-friendly product deliveries and sustainability tips">
+    <title>Subscribe | Urban Harvest</title>
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100">
+
+    <!-- Skip to main content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header / Navigation -->
+    <header class="bg-harvest-600 p-6 text-white shadow-lg no-print">
+        <nav aria-label="Main navigation" class="section-container !py-0 flex flex-wrap items-center justify-between gap-4">
+            
+            <!-- Logo -->
+            <div class="flex items-center gap-2">
+                <span class="text-3xl" aria-hidden="true">🌱</span>
+                <span class="text-xl font-bold">Urban Harvest</span>
+            </div>
+
+            <!-- Mobile menu button -->
+            <button 
+                id="menuBtn" 
+                class="md:hidden bg-white text-harvest-700 px-3 py-2 rounded-lg font-semibold transition-all hover:bg-harvest-50" 
+                aria-label="Toggle navigation menu"
+                aria-expanded="false"
+                aria-controls="menu">
+                ☰
+            </button>
+
+            <!-- Navigation menu -->
+            <ul id="menu" class="hidden md:flex gap-6 w-full md:w-auto mt-4 md:mt-0 flex-col md:flex-row">
+                <li><a href="/" class="nav-link block py-2 md:py-0">Home</a></li>
+                <li><a href="/src/pages/product.html" class="nav-link block py-2 md:py-0">Products</a></li>
+                <li><a href="/src/pages/subscribe.html" class="nav-link block py-2 md:py-0" aria-current="page">Subscribe</a></li>
+                <li><a href="/src/pages/community.html" class="nav-link block py-2 md:py-0">Community</a></li>
+                <li><a href="/src/pages/about.html" class="nav-link block py-2 md:py-0">About</a></li>
+            </ul>
+
+            <!-- Theme toggle -->
+            <button 
+                id="themeToggle"
+                class="bg-white text-harvest-700 px-3 py-2 rounded-lg font-semibold transition-all hover:bg-harvest-50 focus:outline-none focus:ring-4 focus:ring-white/50"
+                aria-label="Toggle dark mode"
+                aria-pressed="false">
+                🌙
+            </button>
+        </nav>
+    </header>
+
+    <main id="main-content" class="section-container">
+        <div class="max-w-2xl mx-auto">
+            <!-- Header -->
+            <div class="section-header">
+                <h1 class="section-title">Join Our Green Community 🌱</h1>
+                <p class="section-subtitle">
+                    Get weekly eco-friendly product boxes and exclusive sustainability tips delivered to your inbox
+                </p>
+            </div>
+
+            <!-- Subscription Form -->
+            <div class="card">
+                <form id="subscribeForm" class="space-y-6" novalidate>
+                    <!-- Email Field -->
+                    <div>
+                        <label for="email" class="block text-sm font-semibold mb-2">
+                            Email Address <span class="text-red-500" aria-label="required">*</span>
+                        </label>
+                        <input 
+                            id="email" 
+                            type="email" 
+                            class="input-field"
+                            placeholder="your.email@example.com"
+                            aria-describedby="emailError emailHelp" 
+                            aria-required="true"
+                            autocomplete="email"
+                            required>
+                        <p id="emailHelp" class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                            We'll never share your email with anyone else.
+                        </p>
+                    </div>
+
+                    <!-- Error Message -->
+                    <div id="emailError" 
+                         class="hidden text-red-600 dark:text-red-400 text-sm font-medium flex items-start gap-2" 
+                         role="alert" 
+                         aria-live="assertive">
+                        <svg class="w-5 h-5 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+                        </svg>
+                        <span>Please enter a valid email address</span>
+                    </div>
+
+                    <!-- Success Message -->
+                    <div id="success" 
+                         class="hidden bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 text-green-800 dark:text-green-200 p-4 rounded-lg flex items-start gap-2" 
+                         role="status" 
+                         aria-live="polite">
+                        <svg class="w-5 h-5 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        <div>
+                            <p class="font-semibold">Success!</p>
+                            <p class="text-sm">Thank you for subscribing! Check your email for confirmation.</p>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn-primary w-full">
+                        Subscribe Now
+                    </button>
+
+                    <!-- Privacy Notice -->
+                    <p class="text-xs text-gray-500 dark:text-gray-400 text-center">
+                        By subscribing, you agree to our 
+                        <a href="#" class="underline hover:text-harvest-600">Terms of Service</a> and 
+                        <a href="#" class="underline hover:text-harvest-600">Privacy Policy</a>
+                    </p>
+                </form>
+            </div>
+
+            <!-- Features -->
+            <div class="mt-12 grid md:grid-cols-3 gap-6">
+                <div class="text-center" data-animate>
+                    <div class="w-16 h-16 bg-harvest-100 dark:bg-harvest-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-3xl" aria-hidden="true">📦</span>
+                    </div>
+                    <h3 class="font-semibold mb-2">Weekly Deliveries</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                        Fresh, local produce every week
+                    </p>
+                </div>
+
+                <div class="text-center" data-animate>
+                    <div class="w-16 h-16 bg-harvest-100 dark:bg-harvest-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-3xl" aria-hidden="true">🌍</span>
+                    </div>
+                    <h3 class="font-semibold mb-2">Carbon Neutral</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                        100% carbon-neutral deliveries
+                    </p>
+                </div>
+
+                <div class="text-center" data-animate>
+                    <div class="w-16 h-16 bg-harvest-100 dark:bg-harvest-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-3xl" aria-hidden="true">💚</span>
+                    </div>
+                    <h3 class="font-semibold mb-2">Cancel Anytime</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                        No long-term commitment required
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 no-print">
+        <div class="section-container">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-white font-bold mb-4 flex items-center gap-2">
+                        <span aria-hidden="true">🌱</span> Urban Harvest
+                    </h3>
+                    <p class="text-sm">
+                        Sustainable living made simple through community and eco-friendly products.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="/src/pages/product.html" class="hover:text-white transition-colors">Products</a></li>
+                        <li><a href="/src/pages/subscribe.html" class="hover:text-white transition-colors">Subscribe</a></li>
+                        <li><a href="/src/pages/about.html" class="hover:text-white transition-colors">About</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Shipping</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Returns</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-sm text-center">
+                <p>&copy; 2026 Urban Harvest. Created for COMP50017 Web Development.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

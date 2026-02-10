@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" class="smooth-scroll">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn about Urban Harvest's mission to support local farmers and reduce food waste through sustainable practices">
+  <title>About Us | Urban Harvest</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100">
+  
+  <!-- Skip to main content -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header / Navigation -->
+  <header class="bg-harvest-600 p-6 text-white shadow-lg no-print">
+    <nav aria-label="Main navigation" class="section-container !py-0 flex flex-wrap items-center justify-between gap-4">
+      
+      <!-- Logo -->
+      <div class="flex items-center gap-2">
+        <span class="text-3xl" aria-hidden="true">🌱</span>
+        <span class="text-xl font-bold">Urban Harvest</span>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button 
+        id="menuBtn" 
+        class="md:hidden bg-white text-harvest-700 px-3 py-2 rounded-lg font-semibold transition-all hover:bg-harvest-50" 
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="menu">
+        ☰
+      </button>
+
+      <!-- Navigation menu -->
+      <ul id="menu" class="hidden md:flex gap-6 w-full md:w-auto mt-4 md:mt-0 flex-col md:flex-row">
+        <li><a href="/" class="nav-link block py-2 md:py-0">Home</a></li>
+        <li><a href="/src/pages/product.html" class="nav-link block py-2 md:py-0">Products</a></li>
+        <li><a href="/src/pages/subscribe.html" class="nav-link block py-2 md:py-0">Subscribe</a></li>
+        <li><a href="/src/pages/community.html" class="nav-link block py-2 md:py-0">Community</a></li>
+        <li><a href="/src/pages/about.html" class="nav-link block py-2 md:py-0" aria-current="page">About</a></li>
+      </ul>
+
+      <!-- Theme toggle -->
+      <button 
+        id="themeToggle"
+        class="bg-white text-harvest-700 px-3 py-2 rounded-lg font-semibold transition-all hover:bg-harvest-50 focus:outline-none focus:ring-4 focus:ring-white/50"
+        aria-label="Toggle dark mode"
+        aria-pressed="false">
+        🌙
+      </button>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    
+    <!-- Hero Section -->
+    <section class="section-container bg-gradient-to-br from-harvest-50 to-emerald-50 dark:from-gray-900 dark:to-gray-800">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-gray-900 dark:text-white" data-animate>
+          Our Mission:
+          <span class="text-gradient-green">Sustainable Living for All</span>
+        </h1>
+        <p class="text-xl sm:text-2xl text-gray-700 dark:text-gray-300 mb-8" data-animate>
+          Supporting local farmers, reducing food waste, and building a greener future together.
+        </p>
+      </div>
+    </section>
+
+    <!-- Mission & Values -->
+    <section class="section-container">
+      <div class="max-w-4xl mx-auto">
+        <div class="section-header">
+          <h2 class="section-title">Who We Are</h2>
+          <p class="section-subtitle">
+            Founded in 2020, Urban Harvest connects conscious consumers with local organic farmers
+          </p>
+        </div>
+
+        <div class="prose prose-lg dark:prose-invert mx-auto">
+          <p class="text-gray-600 dark:text-gray-400 mb-6">
+            Urban Harvest was born from a simple idea: what if we could make sustainable living 
+            easier and more accessible? We noticed that many people wanted to support local farmers 
+            and reduce their environmental impact, but found it challenging to source quality, 
+            eco-friendly products consistently.
+          </p>
+          <p class="text-gray-600 dark:text-gray-400 mb-6">
+            Today, we partner with over 100 local organic farmers within a 50-mile radius, delivering 
+            fresh, seasonal produce and zero-waste products to thousands of households. Every box we 
+            deliver represents a step toward a more sustainable future.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values -->
+    <section class="section-container bg-gray-50 dark:bg-gray-800/50">
+      <div class="section-header">
+        <h2 class="section-title">Our Core Values</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        
+        <div class="card text-center" data-animate>
+          <div class="w-20 h-20 bg-harvest-100 dark:bg-harvest-900 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-4xl" aria-hidden="true">🌍</span>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Environmental Stewardship</h3>
+          <p class="text-gray-600 dark:text-gray-400">
+            Every decision we make considers its impact on our planet. We're committed to 
+            carbon-neutral operations and zero-waste packaging.
+          </p>
+        </div>
+
+        <div class="card text-center" data-animate>
+          <div class="w-20 h-20 bg-harvest-100 dark:bg-harvest-900 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-4xl" aria-hidden="true">🤝</span>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Community First</h3>
+          <p class="text-gray-600 dark:text-gray-400">
+            We build lasting relationships with local farmers and customers, creating a 
+            network of support that benefits everyone.
+          </p>
+        </div>
+
+        <div class="card text-center" data-animate>
+          <div class="w-20 h-20 bg-harvest-100 dark:bg-harvest-900 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-4xl" aria-hidden="true">✨</span>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Quality & Transparency</h3>
+          <p class="text-gray-600 dark:text-gray-400">
+            We're open about our sourcing, practices, and impact. You deserve to know 
+            exactly where your food comes from.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Impact Stats -->
+    <section class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">Our Impact in 2025</h2>
+        <p class="section-subtitle">Together, we're making a real difference</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
+        
+        <div class="text-center card" data-animate>
+          <div class="text-5xl font-bold text-harvest-600 dark:text-harvest-400 mb-2">5,000+</div>
+          <div class="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-1">Active Members</div>
+          <div class="text-xs text-gray-600 dark:text-gray-400">Eco-conscious households</div>
+        </div>
+
+        <div class="text-center card" data-animate>
+          <div class="text-5xl font-bold text-harvest-600 dark:text-harvest-400 mb-2">50T</div>
+          <div class="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-1">CO₂ Saved</div>
+          <div class="text-xs text-gray-600 dark:text-gray-400">Equivalent to 10,000 trees</div>
+        </div>
+
+        <div class="text-center card" data-animate>
+          <div class="text-5xl font-bold text-harvest-600 dark:text-harvest-400 mb-2">100+</div>
+          <div class="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-1">Local Farmers</div>
+          <div class="text-xs text-gray-600 dark:text-gray-400">Within 50-mile radius</div>
+        </div>
+
+        <div class="text-center card" data-animate>
+          <div class="text-5xl font-bold text-harvest-600 dark:text-harvest-400 mb-2">95%</div>
+          <div class="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-1">Waste Diverted</div>
+          <div class="text-xs text-gray-600 dark:text-gray-400">From landfills annually</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Team Section (Optional) -->
+    <section class="section-container bg-gray-50 dark:bg-gray-800/50">
+      <div class="section-header">
+        <h2 class="section-title">Meet the Team</h2>
+        <p class="section-subtitle">Passionate people driving change</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        
+        <div class="card text-center" data-animate>
+          <div class="w-24 h-24 bg-gradient-to-br from-harvest-400 to-emerald-500 rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">
+            SK
+          </div>
+          <h3 class="font-bold text-lg mb-1">Sarah Kumar</h3>
+          <p class="text-sm text-harvest-600 dark:text-harvest-400 mb-2">Founder & CEO</p>
+          <p class="text-sm text-gray-600 dark:text-gray-400">
+            Former agricultural consultant passionate about sustainable food systems
+          </p>
+        </div>
+
+        <div class="card text-center" data-animate>
+          <div class="w-24 h-24 bg-gradient-to-br from-harvest-400 to-emerald-500 rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">
+            MJ
+          </div>
+          <h3 class="font-bold text-lg mb-1">Marcus Johnson</h3>
+          <p class="text-sm text-harvest-600 dark:text-harvest-400 mb-2">Head of Farmer Relations</p>
+          <p class="text-sm text-gray-600 dark:text-gray-400">
+            Third-generation farmer building bridges between producers and consumers
+          </p>
+        </div>
+
+        <div class="card text-center" data-animate>
+          <div class="w-24 h-24 bg-gradient-to-br from-harvest-400 to-emerald-500 rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">
+            AL
+          </div>
+          <h3 class="font-bold text-lg mb-1">Aisha Li</h3>
+          <p class="text-sm text-harvest-600 dark:text-harvest-400 mb-2">Sustainability Director</p>
+          <p class="text-sm text-gray-600 dark:text-gray-400">
+            Environmental scientist ensuring our operations remain carbon-neutral
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-container bg-harvest-600 text-white">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4" data-animate>
+          Join Our Mission
+        </h2>
+        <p class="text-xl mb-8 text-harvest-100" data-animate>
+          Together, we can build a more sustainable future, one box at a time
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center" data-animate>
+          <a href="/src/pages/subscribe.html" class="inline-block bg-white text-harvest-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-harvest-50 transition-all transform hover:scale-105">
+            Start Your Journey
+          </a>
+          <a href="/src/pages/community.html" class="inline-block bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/10 transition-all">
+            Explore Community
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-12 no-print">
+    <div class="section-container">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-white font-bold mb-4 flex items-center gap-2">
+            <span aria-hidden="true">🌱</span> Urban Harvest
+          </h3>
+          <p class="text-sm">
+            Sustainable living made simple through community and eco-friendly products.
+          </p>
+        </div>
+        
+        <div>
+          <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
+            <li><a href="/src/pages/product.html" class="hover:text-white transition-colors">Products</a></li>
+            <li><a href="/src/pages/subscribe.html" class="hover:text-white transition-colors">Subscribe</a></li>
+            <li><a href="/src/pages/about.html" class="hover:text-white transition-colors">About</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-white font-semibold mb-4">Support</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-white transition-colors">FAQ</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Shipping</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Returns</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-white font-semibold mb-4">Legal</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 mt-8 pt-8 text-sm text-center">
+        <p>&copy; 2026 Urban Harvest. Created for COMP50017 Web Development.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

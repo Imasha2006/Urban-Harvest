@@ -1,0 +1,98 @@
+# Netlify Configuration File
+# Documentation: https://docs.netlify.com/configure-builds/file-based-configuration/
+
+[build]
+  # Command to build the project
+  command = "npm run build"
+  
+  # Directory to publish (Vite outputs to /dist by default)
+  publish = "dist"
+  
+  # Ignore builds if nothing changed
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF ."
+
+[build.environment]
+  # Node version (use LTS)
+  NODE_VERSION = "20"
+
+# Redirect all routes to index.html for SPA-like behavior
+# This enables client-side routing if needed in the future
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = false
+
+# Security headers for all pages
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Prevent clickjacking attacks
+    X-Frame-Options = "DENY"
+    
+    # Prevent MIME type sniffing
+    X-Content-Type-Options = "nosniff"
+    
+    # Enable XSS protection
+    X-XSS-Protection = "1; mode=block"
+    
+    # Referrer policy
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    
+    # Permissions policy
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Cache static assets for 1 year
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache HTML files for 1 hour
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+# Don't cache service worker
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "no-cache"
+
+# Custom 404 page (if you create one)
+[[redirects]]
+  from = "/404"
+  to = "/src/pages/404.html"
+  status = 404
+
+# Redirect www to non-www (optional - update with your domain)
+# [[redirects]]
+#   from = "https://www.yourdomain.com/*"
+#   to = "https://yourdomain.com/:splat"
+#   status = 301
+#   force = true
+
+# Plugin: Lighthouse CI (optional - for automated accessibility testing)
+# [[plugins]]
+#   package = "@netlify/plugin-lighthouse"
+#   
+#   [plugins.inputs.thresholds]
+#     performance = 0.85
+#     accessibility = 0.90
+#     best-practices = 0.90
+#     seo = 0.85
+
+# Context-specific settings
+[context.production]
+  command = "npm run build"
+  
+[context.deploy-preview]
+  command = "npm run build"
+
+[context.branch-deploy]
+  command = "npm run build"
+
+# Development context (optional)
+[context.dev]
+  command = "npm run dev"

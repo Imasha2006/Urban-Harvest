@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en" class="smooth-scroll">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Urban Harvest - Sustainable lifestyle platform offering eco-friendly products, community engagement, and environmental impact tracking.">
+  <meta name="keywords" content="sustainable living, eco-friendly, organic produce, carbon footprint, zero waste">
+  <meta name="author" content="Urban Harvest">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://urban-harvest.netlify.app/">
+  <meta property="og:title" content="Urban Harvest - Sustainable Living Made Simple">
+  <meta property="og:description" content="Join our community of eco-conscious consumers. Fresh local produce, zero-waste products, and sustainable living tips.">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Urban Harvest - Sustainable Living Made Simple">
+  <meta property="twitter:description" content="Eco-friendly products and community-driven sustainability">
+  
+  <title>Urban Harvest | Sustainable Living Made Simple</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100">
+  
+  <!-- Skip to main content -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header / Navigation -->
+  <header class="bg-harvest-600 p-6 text-white shadow-lg no-print">
+    <nav aria-label="Main navigation" class="section-container !py-0 flex flex-wrap items-center justify-between gap-4">
+      
+      <!-- Logo -->
+      <div class="flex items-center gap-2">
+        <span class="text-3xl" aria-hidden="true">🌱</span>
+        <span class="text-xl font-bold">Urban Harvest</span>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button 
+        id="menuBtn" 
+        class="md:hidden bg-white text-harvest-700 px-3 py-2 rounded-lg font-semibold transition-all hover:bg-harvest-50" 
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="menu">
+        ☰
+      </button>
+
+      <!-- Navigation menu -->
+      <ul id="menu" class="hidden md:flex gap-6 w-full md:w-auto mt-4 md:mt-0 flex-col md:flex-row">
+        <li><a href="/" class="nav-link block py-2 md:py-0" aria-current="page">Home</a></li>
+        <li><a href="/src/pages/product.html" class="nav-link block py-2 md:py-0">Products</a></li>
+        <li><a href="/src/pages/subscribe.html" class="nav-link block py-2 md:py-0">Subscribe</a></li>
+        <li><a href="/src/pages/community.html" class="nav-link block py-2 md:py-0">Community</a></li>
+        <li><a href="/src/pages/about.html" class="nav-link block py-2 md:py-0">About</a></li>
+      </ul>
+
+      <!-- Theme toggle -->
+      <button 
+        id="themeToggle"
+        class="bg-white text-harvest-700 px-3 py-2 rounded-lg font-semibold transition-all hover:bg-harvest-50 focus:outline-none focus:ring-4 focus:ring-white/50"
+        aria-label="Toggle dark mode"
+        aria-pressed="false">
+        🌙
+      </button>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    
+    <!-- Hero Section -->
+    <section class="section-container bg-gradient-to-br from-harvest-50 to-emerald-50 dark:from-gray-900 dark:to-gray-800">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-gray-900 dark:text-white" data-animate>
+          Sustainable Living,
+          <span class="text-gradient-green">Made Simple</span>
+        </h1>
+        <p class="text-xl sm:text-2xl text-gray-700 dark:text-gray-300 mb-8" data-animate>
+          Fresh local produce, eco-friendly products, and a community committed to reducing environmental impact.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center" data-animate>
+          <a href="/src/pages/subscribe.html" class="btn-primary">
+            Start Your Journey
+          </a>
+          <a href="/src/pages/product.html" class="btn-outline">
+            Browse Products
+          </a>
+        </div>
+        
+        <!-- Stats -->
+        <div class="grid grid-cols-3 gap-6 mt-16 max-w-2xl mx-auto" data-animate>
+          <div>
+            <div class="text-3xl sm:text-4xl font-bold text-harvest-600 dark:text-harvest-400">5000+</div>
+            <div class="text-sm text-gray-600 dark:text-gray-400">Happy Members</div>
+          </div>
+          <div>
+            <div class="text-3xl sm:text-4xl font-bold text-harvest-600 dark:text-harvest-400">50T</div>
+            <div class="text-sm text-gray-600 dark:text-gray-400">CO₂ Saved</div>
+          </div>
+          <div>
+            <div class="text-3xl sm:text-4xl font-bold text-harvest-600 dark:text-harvest-400">100+</div>
+            <div class="text-sm text-gray-600 dark:text-gray-400">Local Farmers</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">Why Choose Urban Harvest?</h2>
+        <p class="section-subtitle">
+          Everything you need for a sustainable lifestyle, delivered to your door
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="card card-interactive text-center" data-animate>
+          <div class="w-20 h-20 bg-harvest-100 dark:bg-harvest-900 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-4xl" aria-hidden="true">🥬</span>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Fresh & Local</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">
+            Farm-to-table produce from local organic farmers within 50 miles of your location.
+          </p>
+          <span class="badge-eco">100% Organic</span>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="card card-interactive text-center" data-animate>
+          <div class="w-20 h-20 bg-harvest-100 dark:bg-harvest-900 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-4xl" aria-hidden="true">♻️</span>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Zero Waste</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">
+            All packaging is 100% recyclable or compostable. Return containers for reuse.
+          </p>
+          <span class="badge-eco">Eco-Friendly</span>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="card card-interactive text-center" data-animate>
+          <div class="w-20 h-20 bg-harvest-100 dark:bg-harvest-900 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-4xl" aria-hidden="true">🌍</span>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Carbon Neutral</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">
+            Every delivery is carbon neutral. Track your environmental impact in your dashboard.
+          </p>
+          <span class="badge-eco">Net Zero</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Preview -->
+    <section class="section-container bg-gray-50 dark:bg-gray-800/50">
+      <div class="section-header">
+        <h2 class="section-title">Featured Products</h2>
+        <p class="section-subtitle">
+          Curated selection of eco-friendly essentials
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+        <!-- Product 1 -->
+        <div class="card" data-animate>
+          <div class="flex items-start justify-between mb-4">
+            <h3 class="text-lg font-bold">Eco Veg Box</h3>
+            <span class="badge-new">New</span>
+          </div>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">
+            Seasonal vegetables from local organic farms
+          </p>
+          <div class="flex items-center justify-between">
+            <span class="text-2xl font-bold text-harvest-600 dark:text-harvest-400">$29</span>
+            <button class="btn-primary" data-modal-trigger="productModal">
+              View Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="card" data-animate>
+          <div class="flex items-start justify-between mb-4">
+            <h3 class="text-lg font-bold">Zero-Waste Kit</h3>
+            <span class="badge-eco">Popular</span>
+          </div>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">
+            Everything you need to start your zero-waste journey
+          </p>
+          <div class="flex items-center justify-between">
+            <span class="text-2xl font-bold text-harvest-600 dark:text-harvest-400">$49</span>
+            <button class="btn-primary" data-modal-trigger="productModal">
+              View Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="card" data-animate>
+          <div class="flex items-start justify-between mb-4">
+            <h3 class="text-lg font-bold">Fruit Basket</h3>
+            <span class="badge">Seasonal</span>
+          </div>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">
+            Fresh, seasonal fruits delivered weekly
+          </p>
+          <div class="flex items-center justify-between">
+            <span class="text-2xl font-bold text-harvest-600 dark:text-harvest-400">$35</span>
+            <button class="btn-primary" data-modal-trigger="productModal">
+              View Details
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <a href="/src/pages/product.html" class="btn-secondary">
+          View All Products
+        </a>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-container bg-harvest-600 text-white">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4" data-animate>
+          Ready to Make a Difference?
+        </h2>
+        <p class="text-xl mb-8 text-harvest-100" data-animate>
+          Join thousands of eco-conscious consumers reducing their environmental footprint
+        </p>
+        <a href="/src/pages/subscribe.html" class="inline-block bg-white text-harvest-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-harvest-50 transition-all transform hover:scale-105" data-animate>
+          Subscribe Today
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-12 no-print">
+    <div class="section-container">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-white font-bold mb-4 flex items-center gap-2">
+            <span aria-hidden="true">🌱</span> Urban Harvest
+          </h3>
+          <p class="text-sm">
+            Sustainable living made simple through community and eco-friendly products.
+          </p>
+        </div>
+        
+        <div>
+          <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
+            <li><a href="/src/pages/product.html" class="hover:text-white transition-colors">Products</a></li>
+            <li><a href="/src/pages/subscribe.html" class="hover:text-white transition-colors">Subscribe</a></li>
+            <li><a href="/src/pages/about.html" class="hover:text-white transition-colors">About</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-white font-semibold mb-4">Support</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-white transition-colors">FAQ</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Shipping</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Returns</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-white font-semibold mb-4">Legal</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 mt-8 pt-8 text-sm text-center">
+        <p>&copy; 2026 Urban Harvest. Created for COMP50017 Web Development.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Product Modal - FIXED: Added 'hidden' class -->
+  <div id="productModal" data-modal="productModal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-content">
+      <div class="flex justify-between items-start mb-4">
+        <h3 id="modalTitle" class="text-2xl font-bold">Product Details</h3>
+        <button data-modal-close class="text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 transition-colors text-3xl leading-none" aria-label="Close modal">
+          ×
+        </button>
+      </div>
+      
+      <div class="mb-6">
+        <div class="flex gap-2 mb-4">
+          <span class="badge-eco">Organic</span>
+          <span class="badge">Carbon Neutral</span>
+        </div>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">
+          Our signature Eco Veg Box contains seasonal, locally-sourced vegetables delivered fresh to your door every week. Each box supports local organic farmers and reduces your carbon footprint.
+        </p>
+        <h4 class="font-semibold mb-2">What's Inside:</h4>
+        <ul class="space-y-2 mb-6">
+          <li class="flex items-center gap-2">
+            <span class="text-harvest-600" aria-hidden="true">✓</span>
+            5-7 varieties of seasonal vegetables
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="text-harvest-600" aria-hidden="true">✓</span>
+            100% organic and pesticide-free
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="text-harvest-600" aria-hidden="true">✓</span>
+            Sourced from farms within 50 miles
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="text-harvest-600" aria-hidden="true">✓</span>
+            Zero-waste packaging included
+          </li>
+        </ul>
+      </div>
+      
+      <div class="flex gap-4">
+        <button class="btn-primary flex-1">Subscribe - $29/week</button>
+        <button data-modal-close class="btn-secondary">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
