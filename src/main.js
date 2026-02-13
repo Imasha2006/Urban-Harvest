@@ -204,13 +204,15 @@ accordionButtons.forEach((btn, index) => {
 });
 
 // ============================================
-// 🔲 Modal Component (NEW)
+// 🔲 Modal Component (FIXED)
 // ============================================
 const modalTriggers = document.querySelectorAll('[data-modal-trigger]');
 const modals = document.querySelectorAll('[data-modal]');
 
+// Set up triggers to open modals
 modalTriggers.forEach(trigger => {
-  trigger.addEventListener('click', () => {
+  trigger.addEventListener('click', (e) => {
+    e.preventDefault();
     const modalId = trigger.getAttribute('data-modal-trigger');
     const modal = document.querySelector(`[data-modal="${modalId}"]`);
     
@@ -218,6 +220,35 @@ modalTriggers.forEach(trigger => {
       openModal(modal);
     }
   });
+});
+
+// Set up close buttons for all modals
+modals.forEach(modal => {
+  // Close button click
+  const closeButtons = modal.querySelectorAll('[data-modal-close]');
+  closeButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      closeModal(modal);
+    });
+  });
+  
+  // Close on backdrop click
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closeModal(modal);
+    }
+  });
+});
+
+// Global escape key handler
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    const openModal = document.querySelector('.modal-overlay:not(.hidden)');
+    if (openModal) {
+      closeModal(openModal);
+    }
+  }
 });
 
 function openModal(modal) {
@@ -233,28 +264,6 @@ function openModal(modal) {
   if (focusableElements.length > 0) {
     focusableElements[0].focus();
   }
-  
-  // Setup close handlers
-  const closeBtn = modal.querySelector('[data-modal-close]');
-  
-  closeBtn?.addEventListener('click', () => closeModal(modal));
-  
-  // Close on backdrop click
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      closeModal(modal);
-    }
-  });
-  
-  // Close on escape key
-  const escapeHandler = (e) => {
-    if (e.key === 'Escape') {
-      closeModal(modal);
-      document.removeEventListener('keydown', escapeHandler);
-    }
-  };
-  
-  document.addEventListener('keydown', escapeHandler);
   
   // Trap focus inside modal
   trapFocus(modal);
