@@ -478,5 +478,31 @@ document.querySelectorAll('[data-animate]').forEach(el => {
 
 console.log('🌱 Urban Harvest - Application initialized successfully');
 
+const tabs = document.querySelectorAll('[role="tab"]');
+const panels = document.querySelectorAll('[role="tabpanel"]');
+
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+
+    // Reset all tabs
+    tabs.forEach(t => {
+      t.setAttribute('aria-selected', 'false');
+      t.classList.remove('border-harvest-600', 'text-harvest-600');
+      t.classList.add('border-transparent');
+    });
+
+    // Hide all panels
+    panels.forEach(panel => {
+      panel.classList.add('hidden');
+    });
+
+    // Activate clicked tab
+    tab.setAttribute('aria-selected', 'true');
+    tab.classList.add('border-harvest-600', 'text-harvest-600');
+
+    const panelId = tab.getAttribute('aria-controls');
+    document.getElementById(panelId).classList.remove('hidden');
+  });
+});
 
 
