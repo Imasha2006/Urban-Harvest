@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Page not found - Urban Harvest">
+  <title>404 - Page Not Found | Urban Harvest</title>
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+  
+  <!-- Navigation -->
+  <nav class="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50" role="navigation" aria-label="Main navigation">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center">
+          <a href="index.html" class="text-2xl font-bold text-primary-600" aria-label="Urban Harvest Home">
+            🌱 Urban Harvest
+          </a>
+        </div>
+        
+        <div class="hidden md:flex space-x-8">
+          <a href="index.html" class="hover:text-primary-600 transition">Home</a>
+          <a href="products.html" class="hover:text-primary-600 transition">Products</a>
+          <a href="subscription.html" class="hover:text-primary-600 transition">Subscribe</a>
+          <a href="community.html" class="hover:text-primary-600 transition">Community</a>
+          <a href="about.html" class="hover:text-primary-600 transition">About</a>
+        </div>
+
+        <div class="flex items-center space-x-4">
+          <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition" aria-label="Toggle dark mode">
+            <span class="dark:hidden text-xl">🌙</span>
+            <span class="hidden dark:inline text-xl">☀️</span>
+          </button>
+          <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700" aria-label="Toggle mobile menu">
+            <span class="text-2xl">☰</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800 border-t dark:border-gray-700">
+      <div class="px-4 py-4 space-y-2">
+        <a href="index.html" class="block py-2 hover:text-primary-600">Home</a>
+        <a href="products.html" class="block py-2 hover:text-primary-600">Products</a>
+        <a href="subscription.html" class="block py-2 hover:text-primary-600">Subscribe</a>
+        <a href="community.html" class="block py-2 hover:text-primary-600">Community</a>
+        <a href="about.html" class="block py-2 hover:text-primary-600">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 404 Error Content -->
+  <main class="min-h-screen flex items-center justify-center px-4 py-16">
+    <div class="max-w-4xl mx-auto text-center">
+      
+      <!-- Error Icon/Illustration -->
+      <div class="mb-8 animate-fade-in">
+        <div class="inline-flex items-center justify-center w-32 h-32 bg-primary-100 dark:bg-primary-900 rounded-full mb-6">
+          <span class="text-7xl" role="img" aria-label="Lost plant">🌿</span>
+        </div>
+        <div class="text-8xl md:text-9xl font-bold text-primary-600 dark:text-primary-500 mb-4">
+          404
+        </div>
+      </div>
+
+      <!-- Error Message -->
+      <div class="animate-slide-up">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">
+          Oops! Page Not Found
+        </h1>
+        <p class="text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
+          Looks like this page has gone off the grid! The page you're looking for doesn't exist or has been moved to a more sustainable location.
+        </p>
+
+        <!-- Quick Links -->
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 mb-8">
+          <h2 class="text-2xl font-bold mb-6">Maybe you were looking for:</h2>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            
+            <a href="index.html" class="card-interactive text-center">
+              <div class="text-4xl mb-3">🏠</div>
+              <h3 class="font-bold text-lg mb-2">Home</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400">Back to homepage</p>
+            </a>
+
+            <a href="products.html" class="card-interactive text-center">
+              <div class="text-4xl mb-3">🛍️</div>
+              <h3 class="font-bold text-lg mb-2">Products</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400">Browse our catalog</p>
+            </a>
+
+            <a href="subscription.html" class="card-interactive text-center">
+              <div class="text-4xl mb-3">📦</div>
+              <h3 class="font-bold text-lg mb-2">Subscribe</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400">View our plans</p>
+            </a>
+
+            <a href="community.html" class="card-interactive text-center">
+              <div class="text-4xl mb-3">👥</div>
+              <h3 class="font-bold text-lg mb-2">Community</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400">Join the conversation</p>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- Back Button -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <button onclick="history.back()" class="btn-primary text-lg">
+            ← Go Back
+          </button>
+          <a href="index.html" class="btn-outline text-lg inline-flex items-center justify-center">
+            🏠 Return Home
+          </a>
+        </div>
+
+        <!-- Search Box (Optional) -->
+        <div class="mt-12 max-w-md mx-auto">
+          <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Or search for what you need:</p>
+          <div class="flex gap-2">
+            <input 
+              type="text" 
+              placeholder="Search Urban Harvest..." 
+              class="input-field flex-1"
+              id="search-input"
+            />
+            <button class="btn-primary px-6">
+              Search
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Fun Fact Section -->
+      <div class="mt-16 p-6 bg-primary-50 dark:bg-primary-900 rounded-xl">
+        <h3 class="text-lg font-bold mb-2">🌱 Did you know?</h3>
+        <p class="text-gray-700 dark:text-gray-300">
+          While you're here, our community has saved over <span class="font-bold text-primary-600">50 tons</span> of CO₂ this year through sustainable living practices!
+        </p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 dark:bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8 mb-8">
+        <div>
+          <h4 class="font-bold text-lg mb-4">Urban Harvest</h4>
+          <p class="text-gray-300">Sustainable living made simple for everyone.</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="products.html" class="text-gray-300 hover:text-primary-400">Products</a></li>
+            <li><a href="subscription.html" class="text-gray-300 hover:text-primary-400">Subscribe</a></li>
+            <li><a href="community.html" class="text-gray-300 hover:text-primary-400">Community</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Support</h4>
+          <ul class="space-y-2">
+            <li><a href="about.html" class="text-gray-300 hover:text-primary-400">About Us</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-primary-400">Contact</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-primary-400">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Connect</h4>
+          <div class="flex space-x-4">
+            <a href="#" class="text-2xl hover:text-primary-400" aria-label="Facebook">📘</a>
+            <a href="#" class="text-2xl hover:text-primary-400" aria-label="Twitter">🐦</a>
+            <a href="#" class="text-2xl hover:text-primary-400" aria-label="Instagram">📷</a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 pt-8 text-center text-gray-300">
+        <p>&copy; 2024 Urban Harvest. All rights reserved. Sustainable living made simple.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="./src/main.js"></script>
+
+  <!-- Simple search functionality -->
+  <script>
+    const searchInput = document.getElementById('search-input');
+    if (searchInput) {
+      searchInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+          const searchTerm = searchInput.value.trim();
+          if (searchTerm) {
+            // Redirect to products page (you could add actual search functionality)
+            window.location.href = `products.html?search=${encodeURIComponent(searchTerm)}`;
+          }
+        }
+      });
+    }
+  </script>
+</body>
+</html>
