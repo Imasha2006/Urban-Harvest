@@ -17,7 +17,7 @@ export default defineConfig({
         community: 'src/pages/community.html',
         product: 'src/pages/product.html',
         subscribe: 'src/pages/subscribe.html',
-        '404': 'src/pages/404.html',
+      
       },
     },
   },
